@@ -133,16 +133,6 @@ def shapley_simple_mcnet(mapping, agents):
 
     print('MCNet Shapley values:', shapley_values)
 
-
-
-
-
-
-
-
-
-
-
 agents=frozenset([1,2,3])
 mapping={
   frozenset([1]):12,
@@ -156,7 +146,7 @@ mapping={
 
 agents_mcnet=frozenset(['a', 'b', 'c', 'd'])
 mapping_mcnet={
-  frozenset(['a^c^~b']):8,
+  frozenset(['a^c']):8,
   frozenset(['b^~a']):5,
   frozenset(['c^~a']):2,
   frozenset(['c']):5,
