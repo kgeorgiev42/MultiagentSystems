@@ -155,7 +155,7 @@ mapping={
   frozenset([1,2,3]):500
 }
 
-agents_mcnet=frozenset(['a', 'b', 'c'])
+agents_mcnet=frozenset(['a', 'b', 'c', 'd'])
 mapping_mcnet={
   frozenset(['a^c']):8,
   frozenset(['b^~a']):5,
