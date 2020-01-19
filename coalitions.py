@@ -35,10 +35,11 @@ def get_utility_combinations(agents, singleton_utilities, sum_utils):
         print('Non-empty core')
         print('Core length:', len(in_core_candidates))
         print('Core candidates:')
-        print(in_core_candidates)
+        print(in_core_candidates[:10])
 
+    print()
     print('Non-core length:', len(out_of_core_candidates))
-    print('Out-of-core candidates:', out_of_core_candidates)
+    print('Out-of-core candidates:', out_of_core_candidates[:10])
 
 
 def estimate_core_values(mapping, agents):
@@ -133,18 +134,28 @@ def shapley_simple_mcnet(mapping, agents):
 
     print('MCNet Shapley values:', shapley_values)
 
+
+
+
+
+
+
+
+
+
+
 agents=frozenset([1,2,3])
 mapping={
-  frozenset([1]):12,
-  frozenset([2]):18,
-  frozenset([3]):6,
-  frozenset([1,2]):60,
-  frozenset([1,3]):72,
-  frozenset([2,3]):48,
-  frozenset([1,2,3]):120
+  frozenset([1]):100,
+  frozenset([2]):125,
+  frozenset([3]):50,
+  frozenset([1,3]):375,
+  frozenset([2,3]):350,
+  frozenset([1,2]):270,
+  frozenset([1,2,3]):500
 }
 
-agents_mcnet=frozenset(['a', 'b', 'c', 'd'])
+agents_mcnet=frozenset(['a', 'b', 'c'])
 mapping_mcnet={
   frozenset(['a^c']):8,
   frozenset(['b^~a']):5,
