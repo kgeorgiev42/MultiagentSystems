@@ -1,7 +1,6 @@
 import random
 import networkx as nx
 import matplotlib.pyplot as plt
-import time
 import numpy as np
 import math
 
@@ -28,7 +27,7 @@ class Agent:
 
         numerator = math.gamma(alpha + beta + 2)
         denominator = math.gamma(alpha + 1) * math.gamma(beta + 1)
-        p = float(alpha / (alpha + beta))
+        p = float((alpha + 1) / (alpha + beta + 2))
 
         phi = float( (numerator / denominator) * math.pow(p, alpha) * math.pow((1 - p), beta))
         rep_rating = float((alpha - beta) / (alpha + beta + 2))
